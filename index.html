@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>邵晓鹤 2021元旦快乐❤️</title>
+
+    <script>
+        //判断客户端设备，选择写入meta
+        function init_viewport(){
+            if(navigator.userAgent.indexOf('Android') != -1){
+                var version = parseFloat(RegExp.$1);
+                if(version>2.3){
+                    var width = window.outerWidth == 0 ? window.screen.width : window.outerWidth;
+                    var phoneScale = parseInt(width)/500;
+                    document.write('<meta name="viewport" content="width=500, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+                }else{
+                    document.write('<meta name="viewport" content="width=500, target-densitydpi=device-dpi, user-scalable=0">');
+                }
+            }else if(navigator.userAgent.indexOf('iPhone') != -1){
+                var phoneScale = parseInt(window.screen.width)/500;
+                document.write('<meta name="viewport" content="width=500, min-height=750, initial-scale=' + phoneScale +', maximum-scale='+phoneScale+', user-scalable=0" /> ');         //0.75   0.82
+            }else{
+                document.write('<meta name="viewport" content="width=500, height=750, initial-scale=0.64" /> '); //0.75  0.82
+            }
+        }
+        init_viewport();
+    </script>
+
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            -webkit-box-sizing: border-box;
+        }
+        body {
+            background-color: white;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #div_container { /*最外层div，用于居中兼容PC和移动*/
+            width: 500px;
+            margin: 0px auto;
+            position: relative;
+            /*background-color: #FAFAFA;*/
+            font-size: 1em;
+        }
+
+
+
+        .div_simple_page { /*文字部分的最外层，用于定位*/
+            position: relative;
+            display: none;
+        }
+        .div_s_page_bg { /*背景设置在这里*/
+            background-repeat: repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+            width: 500px;
+            min-height: 1200px;
+        }
+        .div_s_page_height {
+            visibility: hidden;
+            padding: 30px;
+            text-align: justify;  /*为了使文字两端对齐 */
+            white-space:pre-wrap; /*保留换行效果*/
+            color: silver;
+        }
+        .div_s_page_zx {
+            position: absolute;
+            left: 0;
+            right: 0;  /*4个方向定位使div充满整个画画*/
+            top: 0;
+            bottom: 0;  /*4个方向定位使div充满整个画画*/
+            width: 500px;
+            background:rgba(255,255,255,0.8); /*半透明效果*/
+            padding: 30px;
+            text-align: justify;  /*为了使文字两端对齐 */
+            white-space:pre-wrap; /*保留换行效果*/
+        }
+
+
+        #div_start_bg{
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0px; top: 0px;
+            z-index: 44;
+            background-color: white;
+        }
+    </style>
+
+    <link type="text/css" rel="stylesheet" href="CSS/theme_s_page_zx.css">
+
+    <!-- 按钮部分的样式 -->
+    <link type="text/css" rel="stylesheet" href="CSS/theme_public_btn.css">
+
+
+
+
+
+
+
+
+
+
+    <!-- 按需加载，选择此片头时方才加载 -->
+    <link type="text/css" rel="stylesheet" href="CSS/start_intersect.css">
+
+
+
+
+</head>
+
+<body>
+<div id="div_container"> <!-- 最外层div，用于居中兼容PC和移动 -->
+
+    <div id="div_start_bg"></div> <!-- 用于遮挡主题，作为片头的背景 -->
+
+
+
+
+    <!-- 按需加载，选择此片头时方才加载 -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 按需加载，选择此片头时方才加载 -->
+    <div id="div_intersect"><!-- 用于设置背景 -->
+        <div id="div_is_inner"><!-- 用于存放content -->
+            <div class="div_is_open_bg">
+                <div class="div_is_open_btn" onclick="init_is_typed()"></div>
+            </div>
+
+            <!-- 画布在这里 -->
+            <canvas id="canvas_is"></canvas>
+
+            <!-- 打字在这里 -->
+            <div class="div_is_typed">
+                <div id="div_is_img">
+                    <img class="img_is_typed">
+                </div>
+                <span id="span_is_typed"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+    <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+    <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+    <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+    <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+
+
+
+
+
+
+    <div class="div_simple_page"> <!-- 文字部分的最外层，用于定位 -->
+        <div class="div_s_page_bg"><!-- 背景设置在这里 -->
+            <div class="div_s_page_height">
+                <!-- 正文的内容复制到这里面，撑开整个文档的高度 -->
+            </div>
+        </div>
+        <div class="div_s_page_zx">
+            <!-- 正文部分，绝对定位 --> <!-- zx-editor的内容放在这里 -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id='div_btn_container'> <!-- 按钮部分的最外层，处于文档流之中 -->
+        <div id="div_btn_inner"> <!-- 按钮部分内层，用于定位 -->
+
+            <div class='div_music_tips'></div>
+            <div class="div_btn" id="div_music" onclick="music_switch()"> <!-- 音乐按钮部分 -->
+                <img id='img_music' src='images/music_note_big.png' style='-webkit-animation:music_play_rotate 1s linear infinite'>
+                <audio id="audio_music" autoplay="autoplay" loop="loop">
+                    <source type="audio/mpeg"/>
+                    <!-- 您的浏览器不支持播放音乐 -->
+                </audio>
+            </div>
+
+            <div class='div_record_tips'></div>
+            <div class="div_btn" id="div_record" onclick="record_switch()"> <!-- 录音按钮部分 -->
+                语音
+                <audio id="audio_record" loop="loop">
+                    <source type="audio/mpeg"/>
+                    <!-- 您的浏览器不支持播放音乐 -->
+                </audio>
+            </div>
+
+            <!-- 只在提交状态显示 只在提交状态显示 只在提交状态显示 只在提交状态显示 -->
+
+            <!-- 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 -->
+
+            <!-- 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="JS/jquery-2.0.3.min.js"></script>
+<script src="JS/typed.min.js"></script>
+<script src="JS/support_upload_as.js"></script>
+<script>
+    console.log('$(window).height ->'+$(window).height());
+
+    var theme='simple_page';
+    console.log('theme ->'+theme);
+    var theme_content={"pure_words_content":"","typed_bool":"typed_y","cursor_char":"cursor_heart","bg_style_pure_words":"bg_opacity","bg_img":"http://ali2.a.yximgs.com/upic/2020/12/26/21/BMjAyMDEyMjYyMTM4MzNfNTQ4MTA5ODcwXzQxMzU0MjQyNzQ3XzFfNg==_B6886c06bb821605293c490c3cc675bf0.jpg","simple_page_content":"&lt;h2 style=&quot;color: rgb(255, 88, 61);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;\/h2&gt;&lt;h2 style=&quot;color: rgb(255, 88, 61);&quot;&gt;&lt;span style=&quot;color: rgb(255, 88, 61); font-size: 1.2em;&quot;&gt;&lt;br&gt;&lt;\/span&gt;&lt;\/h2&gt;&lt;h2&gt;&lt;span style=&quot;font-size: 1.2em;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;\/span&gt;&lt;span style=&quot;color: rgb(255, 88, 61); font-size: 1.2em;&quot;&gt;2021 &amp;nbsp;&lt;\/span&gt;&lt;span style=&quot;color: rgb(255, 88, 61); font-size: 1.2em;&quot;&gt;\元旦快乐呀！&lt;\/span&gt;&lt;br&gt;&lt;\/h2&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(255, 88, 61); font-size: 1.2em;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; \❤❤❤❤❤❤❤❤❤&lt;\/span&gt;&lt;\/p&gt;","video_page_content":"","bg_style":"bg_custom"};
+    console.log(theme_content);
+
+    var music_json={"music_select":"m_online","m_online_id":"6","m_online_url":"https://sf3-dycdn-tos.pstatp.com/obj/ies-music/1655235697334302.mp3","m_upload_name":"null","m_upload_url":"null"};
+    console.log(music_json);
+    var record_json={"record_bool":"r_false","r_wechat_time":"null","r_wechat_url":"null","r_wechat_amr":"null"};
+    console.log(record_json);
+    var signPackage={"appid":"wx47f716bdd7699533","timestamp":1608990661,"nonceStr":"Z3NpX9ii7gQYYlP9","url":"http:\/\/www.makusi.cn\/Home\/Play\/play_show\/ws\/YGdsmm1q","signature":"f6da074e2a06937f6c73dc02256064b5a20f6fbd","rawString":"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VHINcjHJVwMsFjJyfreRy7BIe_ZfGkonFFUFo61KD6kuytthhMnZiacZNaW5kUNJIQ&noncestr=Z3NpX9ii7gQYYlP9&timestamp=1608990661&url=http:\/\/www.makusi.cn\/Home\/Play\/play_show\/ws\/YGdsmm1q"};
+
+    var main_title='邵晓鹤 元旦快乐❤️';
+    // console.log(main_title);
+    if(main_title=='' || main_title=='null'){  //允许标题为空
+        document.title='很高兴遇见你';
+    }
+    // console.log("");
+
+
+    var s_page_content=theme_content['simple_page_content'];
+    var interval_s_height;
+    var height_s_page=$(".div_s_page_height").height();
+    function init_simple_page(){
+        load_saved_content(); //加载内容
+        // 初始化设置div的bg图片 初始化设置div的bg图片
+        if(typeof(theme_content['bg_style'])!='undefined' && theme_content['bg_style']=='bg_custom'){
+            if(typeof(theme_content['bg_img'])!='undefined' && theme_content['bg_img']!=''){
+                $(".div_s_page_bg").css({"background-image": "url("+theme_content['bg_img']+")"});
+            }
+        }
+
+        interval_s_height=setInterval(function(){
+            console.log('div_s_page_height -> '+$(".div_s_page_height").height());
+            var latest_height_s_page=$(".div_s_page_height").height();
+            if(latest_height_s_page<=height_s_page){
+                clearInterval(interval_s_height);
+                $(".div_s_page_height").height(latest_height_s_page+200);
+                if($(".div_s_page_height").height()<$(window).height()){
+                    $(".div_s_page_height").height($(window).height()); //不能小于窗口的高度
+                    console.log('let us be high as window');
+                }
+            }else{
+                height_s_page=latest_height_s_page;
+            }
+        },100);
+
+        $(".div_simple_page").fadeIn();
+        init_attachment();
+    }
+
+
+
+    function load_saved_content(){
+        if(typeof(s_page_content)=='undefined'){ //全新作品未保存
+            console.log('s_page_content -> undefined');
+            load_random_content();
+            return;
+        }
+        // temp_content=escape2Html(s_page_content);
+        // temp_content=temp_content.replace(/<[^<>]+>/g,'');
+        // temp_content=temp_content.replace(/\n|\r|\s/g,'');
+        // // console.log(temp_content);
+        // if(temp_content==''){ //曾有保存但没有内容，则显示为空白
+        //     load_random_content()
+        //     return;
+        // }
+        console.log('load_saved_content');
+        var html_content=escape2Html(s_page_content);
+        $(".div_s_page_zx").html(html_content); //初始化加载内容
+        $(".div_s_page_height").html(html_content); //初始化复制内容，撑开文档高度
+    }
+
+    function load_random_content(){
+        console.log('load_random_content');
+        var random_content="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;h2 style=&quot;color: rgb(255, 88, 61); font-weight: 800;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;送给你的小惊喜&lt;/h2&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;"+random_text()+"&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-img&quot; contenteditable=&quot;false&quot;&gt;&lt;img src=&quot;"+random_img()+"&quot; width=&quot;100%&quot; height=&quot;auto&quot; id=&quot;zxeditor_img_1570285474432&quot;&gt;&lt;i class=&quot;__remove&quot;&gt;&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;"+random_text()+"&lt;/p&gt;&lt;p class=&quot;child-node-is-text&quot;&gt;"+random_text()+"&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-img&quot; contenteditable=&quot;false&quot;&gt;&lt;img src=&quot;"+random_img()+"&quot; width=&quot;100%&quot; height=&quot;auto&quot; id=&quot;zxeditor_img_1570409946707&quot;&gt;&lt;i class=&quot;__remove&quot;&gt;&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-text&quot;&gt;"+random_text()+"&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-text&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; "+"——爱你的小鹿"+"&lt;/p&gt;";
+        var html_content=escape2Html(random_content);
+        $(".div_s_page_zx").html(html_content); //初始化加载内容
+        $(".div_s_page_height").html(html_content); //初始化复制内容，撑开文档高度
+    }
+
+
+    //转义为html
+    function escape2Html(str) {
+        var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+        return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+    }
+
+    var temp_text_array=array_as_words_love;
+    function random_text(){
+        var random_text_index=Math.floor(Math.random()*temp_text_array.length);
+        var random_text=temp_text_array[random_text_index];
+        temp_text_array.splice(random_text_index,1);
+        return random_text;
+    }
+    var temp_img_array=array_as_pics_s;
+    function random_img(){
+        var random_img_index=Math.floor(Math.random()*temp_img_array.length);
+        var random_img=temp_img_array[random_img_index];
+        temp_img_array.splice(random_img_index,1);
+        return random_img;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+<!-- 按需加载，选择此片头时方才加载 -->
+
+
+<script>
+    var start_content={"intersect_text":"\宝贝儿，这个来的有点晚了呀。我们一起过了这么多年，还是一如既往爱你啊。惟愿你，常开心，常欢喜，有趣，有盼，无灾，无难。有的时候是我做的不够好，谢谢你的多担待。我爱你，一如既往。元旦快乐啊，宝宝！","cursor_char":"cursor_heart","bg_style":"bg_custom","bg_img":"http://ali2.a.yximgs.com/upic/2020/12/26/21/BMjAyMDEyMjYyMTM4MzNfNTQ4MTA5ODcwXzQxMzU0MjQyNzQ3XzFfNg==_B6886c06bb821605293c490c3cc675bf0.jpg","img_bool":"img_true","img_src":"https://obs.liaoxingqiu.com/images/static/ios_8721373_2020-09-29-00-25-14-436.jpg"}; //可能为null
+    console.log(start_content);
+
+    $(function(){
+        //此事件为触发互动创意
+        var start_id='intersect'; //可能为null
+        init_start(start_id);
+    });
+
+    function init_start(start_id){
+        console.log('init_start ->'+start_id);
+        switch(start_id){
+            case 'loveformat':
+                $('.div_loveformat').show();
+                init_loveformat();
+                break;
+            case 'hearttree':
+                $('#div_hearttree').show();
+                init_hearttree();
+                break;
+            case 'courage':
+                $('#div_courage').show();
+                init_courage();
+                break;
+            case 'birthdaycake':
+                $('#div_dbcake').show();
+                init_birthdaycake();
+                break;
+            case 'intersect':
+                $('#div_intersect').show();
+                init_intersect();
+                break;
+            case 'onlyyou':
+                $('#div_onlyyou').show();
+                init_onlyyou();
+                break;
+            default:
+                init_theme();
+        }
+    }
+
+    //开始动画主体部分
+    function init_theme(){
+        console.log('init_theme');
+        $('#div_start_bg').fadeOut();
+        init_simple_page();
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 按需加载，选择此片头时方才加载 -->
+<script src="JS/start_intersect.js.js"></script>
+
+
+
+
+
+
+
+<script>
+    var attachment='null'; //可能为null
+    var attached_content={"bool_save":false}; //可能为null
+    console.log(attached_content);
+
+    function init_attachment(){  //开始attachment
+        console.log('init_attachment ->'+attachment);
+        switch(attachment){
+            case 'timer':
+                init_at_timer();
+                break;
+            default:
+                return;
+        }
+    }
+</script>
+
+
+
+
+
+<script src='JS/jweixin-1.6.0.js'></script>
+<script src='JS/theme_common.js'></script> <!-- 音乐控制和微信设置等公共部分js外部引入 -->
+
+
+
+
+
+</body>
+</html>
